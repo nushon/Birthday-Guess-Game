@@ -1,0 +1,33 @@
+body{
+    background-image: url(./img/pexels-pixabay-414706.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#overallDiv{
+    width: 60%;
+    height: 500px;
+    background-color: rgb(200, 199, 199);
+    opacity: 0.8;
+    margin: 100px auto auto auto;
+}
+#heading{
+    text-align: center;
+}
+
+#btnDiv{
+    margin-top: 90px;
+    /* background-color: lightblue; */
+    text-align: center;
+}
+#btn{
+    width: 30%;
+    height: 60px;
+}
+
+#pDiv{
+    text-align: center;
+    margin-top: 80px;
+}
+#Output{
+    text-align: center;
+}
