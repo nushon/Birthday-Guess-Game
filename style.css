@@ -1,5 +1,5 @@
 body{
-    background-image: url(./img/pexels-pixabay-414706.jpg);
+    background-image: url(./img/pexels-giftpunditscom-1303098.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,7 +8,7 @@ body{
     width: 60%;
     height: 500px;
     background-color: rgb(200, 199, 199);
-    opacity: 0.8;
+    /* opacity: 0.8; */
     margin: 100px auto auto auto;
     border-radius: 10px;
 }

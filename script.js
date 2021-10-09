@@ -1,38 +1,36 @@
 let output = document.getElementById("Output");
 let recentGuess = document.getElementById("recent");
 let playAgainBtn = document.getElementById("playAgain");
+var people;
+var mypeop;
 
-var birthdays = [];
-var names =["February 19th is Albin's Birthday", "May 3rd is James Birthday", "Apirl 0 is Blessing's Birthday", "October 9th is Carlos's Birthday", "July 11th is Rudeen's Birthday", "March 13th is Ben's Birthday"];
+let birthdays = [];
+var names = [{"Albin" : "February 19 is Albin's Birthday", "James" : "March 30 is James' Birthday", "Ben" : "March 17 is Ben's Birthday", "Bokai":"January 15 is Bokai's Birthday", "Calous":"October 9 is Calous' Birthday", "Rudeen":"July 15 is Rudeen's Birthday", "Blessing":"April 5 is Blessing's Birthday"}];
 function get_num(max){
 return Math.floor(Math.random() * max);
 
 }
-get_num(6);
+// get_num(6);
 
 var numAns = get_num(6);
 console.log(numAns);
 
 function valid(){
-for(var i = 0; i < names.length; i++)
-{
-    if(names.indexOf(names[i]) === get_num(6))
-    {
-        output.innerHTML = names[i];
-        birthdays.push(names[i])
-        console.log(birthdays);
-    }
+      
+names.forEach(members => people = members);
+mypeop = Object.entries(people);
+console.log(mypeop);
 
-}
-playAgainBtn.style.display = "block";
-playAgainBtn.style.margin = "auto auto auto auto";
-}
+   for(var i = 0; i < mypeop.length; i++){
+        if(mypeop.indexOf(mypeop[i]) === get_num(6))
+        {
+            output.innerHTML = mypeop[i][1];
+            
+            // previous results 
+            birthdays.push(mypeop[i][0])
+            console.log(birthdays);
+        }
 
-function playAgain(){
-    output.innerHTML = "";
-    get_num(6);
-
-    // const result = birthdays.filter(birthdays => birthdays.length > 6);
-    recentGuess.innerHTML = birthdays;
-    console.log("this is result: ", result);
+   }
+recentGuess.innerHTML = birthdays;
 }
